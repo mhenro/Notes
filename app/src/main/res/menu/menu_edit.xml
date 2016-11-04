@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ru.mhenro.notes.NoteActivity">
+
+    <!-- "Mark Favorite", should appear as action button if possible -->
+    <!-- android:icon="@drawable/ic_favorite_black_48dp" -->
+    <item
+        android:id="@+id/action_edit"
+        android:title="@string/action_edit"
+        android:icon="@drawable/dr_edit"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_done"
+        android:title="@string/action_done"
+        android:icon="@drawable/dr_done"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_exit"
+        android:title="@string/action_exit"
+        android:icon="@drawable/dr_delete"
+        app:showAsAction="ifRoom"/>
+
+</menu>

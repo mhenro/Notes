@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "988500279632",
+    "firebase_url": "https://notes-3fdaf.firebaseio.com",
+    "project_id": "notes-3fdaf",
+    "storage_bucket": "notes-3fdaf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988500279632:android:dc9d72d85caa4c45",
+        "android_client_info": {
+          "package_name": "ru.mhenro.notes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "988500279632-sl0ioofmhe5d7ps8t8soq0mbe7i9qsbq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPgVys5cWpu6J39coE0-OOzT_XjIwf9dE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Заметки</string>
+    <string name="action_settings">Настройки</string>
+    <string name="action_done">Готово</string>
+    <string name="action_edit">Редактировать</string>
+    <string name="action_exit">Закрыть</string>
+    <string name="btnNewNote">Новая заметка</string>
+    <string name="noteTitle">Заголовок</string>
+    <string name="chkNotify">Напомнить</string>
+    <string name="noteTitleEmpty">Введите заголовок здесь</string>
+    <string name="noteBodyEmpty">Введите текст заметки здесь</string>
+
+
+    <string name="view_record">Просмотр</string>
+    <string name="edit_record">Редактирование</string>
+    <string name="delete_record">Удаление</string>
+
+    <!-- admob (fot test write this - "ca-app-pub-3940256099942544/6300978111" !!! -->
+    <string name="notes_banner">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="notes_banner_view">ca-app-pub-3940256099942544/6300978111</string>
+</resources>

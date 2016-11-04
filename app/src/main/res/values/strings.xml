@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_done">Done</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_exit">Exit</string>
+    <string name="btnNewNote">New note</string>
+    <string name="noteTitle">Title</string>
+    <string name="chkNotify">Notify at</string>
+    <string name="noteTitleEmpty">Input note title here</string>
+    <string name="noteBodyEmpty">Input note text here</string>
+
+
+    <string name="view_record">View</string>
+    <string name="edit_record">Edit</string>
+    <string name="delete_record">Delete</string>
+
+    <!-- admob (fot test write this - "ca-app-pub-3940256099942544/6300978111" !!! -->
+    <string name="notes_banner">ca-app-pub-4322047714383216/3692576085</string>
+    <string name="notes_banner_view"> ca-app-pub-4322047714383216/3273773687</string>
+</resources>
