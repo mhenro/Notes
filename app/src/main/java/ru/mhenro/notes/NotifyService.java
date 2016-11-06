@@ -1,5 +1,6 @@
 package ru.mhenro.notes;
 
+import android.app.AlarmManager;
 import android.app.IntentService;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -9,6 +10,7 @@ import android.database.Cursor;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.NotificationCompat;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -29,6 +31,17 @@ public class NotifyService extends IntentService {
         super.onCreate();
 
         init();
+    }
+
+    @Override
+    public void onStart(Intent intent1, int startId) {
+        super.onStart(intent1, startId);
+
+        Intent intent = new Intent(this, ServiceStartupReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        // Repeat the notification every 15 seconds (15000)
+        AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
+        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 15000, pendingIntent);
     }
 
     @Override

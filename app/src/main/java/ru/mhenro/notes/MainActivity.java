@@ -1,5 +1,6 @@
 package ru.mhenro.notes;
 
+import android.app.AlarmManager;
 import android.app.LoaderManager;
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -8,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Handler;
+import android.os.SystemClock;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
@@ -31,9 +33,11 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
+import java.util.Calendar;
+
 public class MainActivity extends AppCompatActivity implements android.support.v4.app.LoaderManager.LoaderCallbacks<Cursor> {
 
-    public static boolean IS_TEST = false;
+    public static boolean IS_TEST = true;
     private static final int CM_VIEW_ID = 1;
     private static final int CM_EDIT_ID = 2;
     private static final int CM_DELETE_ID = 3;
@@ -112,19 +116,18 @@ public class MainActivity extends AppCompatActivity implements android.support.v
             }
         });
 
-
-        /* creating a thread to check notifications */
-        final Handler handler = new Handler();
-        final Intent intentService = new Intent(this, NotifyService.class);
-        final Runnable r = new Runnable() {
-            @Override
-            public void run() {
-                startService(intentService);
-                handler.postDelayed(this, 60000);
-            }
-        };
-        handler.postDelayed(r, 1000);
+        /* starting alarm manager for notifications */
+        startAlarmManager();
     }
+
+    public void startAlarmManager() {
+        Intent intent = new Intent(this, ServiceStartupReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
+        AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
+        alarmManager.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
+                AlarmManager.INTERVAL_FIFTEEN_MINUTES, AlarmManager.INTERVAL_FIFTEEN_MINUTES, pendingIntent);
+    }
+
 
     public void openNoteWindow(WINDOW_MODE mode, long id) {
         Intent intent = null;

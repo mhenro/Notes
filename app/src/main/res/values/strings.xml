@@ -16,6 +16,6 @@
     <string name="delete_record">Delete</string>
 
     <!-- admob (fot test write this - "ca-app-pub-3940256099942544/6300978111" !!! -->
-    <string name="notes_banner">ca-app-pub-4322047714383216/3692576085</string>
-    <string name="notes_banner_view"> ca-app-pub-4322047714383216/3273773687</string>
+    <string name="notes_banner">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="notes_banner_view">ca-app-pub-3940256099942544/6300978111</string>
 </resources>
